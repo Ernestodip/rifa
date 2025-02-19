@@ -1,46 +1,154 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #1e1e1e;
-    color: #ffff00;
+    background-color: #2f2f2f; /* Fondo gris oscuro más suave */
+    color: #f5f5f5;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     padding: 20px;
+    margin: 0;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 36px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    color: rgb(255, 230, 0);
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(111, 0, 255, 0.7), 0 0 30px rgba(111, 0, 255, 0.7);
+    margin-bottom: 30px;
+    animation: slideIn 1.2s ease-out; /* Animación de entrada del título */
+}
+
+/* Animación de entrada para el título */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 
 table {
     border-collapse: collapse;
-    background-color: #4a4a4a;
-    box-shadow: 0px 0px 10px #ffff00;
-    margin: 0 auto;
+    background-color: #b32a00; /* Rojo más intenso */
+    box-shadow: 0 0 20px rgba(255, 208, 0, 0.3);
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out; /* Animación de aparición de la tabla */
 }
 
 th, td {
-    border: 1px solid #ffff00;
-    padding: 10px;
+    border: 2px solid #ae00ff;
+    padding: 20px;
     font-size: 18px;
     text-align: center;
-    width: 50px;
     cursor: pointer;
+    width: 60px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 th {
-    background-color: #333333;
+    background-color: #222; /* Fondo más oscuro para encabezado */
+    color: #00ffff;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-/* 🔴 Estilo para los números vendidos */
-.vendido {
-    background-color: red !important;
+td {
+    background-color: #2b2b2b;
+    color: #00ffff;
+    font-size: 16px;
+    padding: 15px;
+}
+
+td:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 255, 255, 0.4); /* Cambio de color más sutil */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra al hacer hover */
+}
+
+td.vendido {
+    background-color: #ff3333 !important;
     color: white !important;
     text-decoration: line-through;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
+
+td.vendido:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* Animación de aparición de la tabla */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Mobile-first */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+        width: 45px;
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 601px) {
+    table {
+        width: 80%;
+    }
+
+    th, td {
+        width: 60px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    th, td {
+        padding: 20px;
+        font-size: 22px;
+        width: 70px;
+    }
+
+    table {
+        width: 70%;
+    }
+}
+
 
