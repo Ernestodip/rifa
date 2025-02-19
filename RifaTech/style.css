@@ -1,0 +1,46 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffff00;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #4a4a4a;
+    box-shadow: 0px 0px 10px #ffff00;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 1px solid #ffff00;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+th {
+    background-color: #333333;
+}
+
+/* 🔴 Estilo para los números vendidos */
+.vendido {
+    background-color: red !important;
+    color: white !important;
+    text-decoration: line-through;
+}
+
