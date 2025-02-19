@@ -8,15 +8,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Super Rifa</h1>
-    <div class="container">
-        <table>
-            <tbody id="tabla-rifa">
-            </tbody>
-        </table>
-    </div>
+    <div class="main-container"> <!-- Nuevo contenedor principal -->
+        <header>
+            <h1>Super Rifa</h1>
+            <button id="btn-reglas" class="btn-reglas">Reglas de la Rifa</button>
+        </header>
 
-    <!-- Importamos el script con type="module" -->
+        <!-- Modal de Reglas -->
+        <div id="modal-reglas" class="modal">
+            <div class="modal-content">
+                <span id="cerrar-modal" class="cerrar">&times;</span>
+                <h2>Reglas de la Rifa</h2>
+                <p><strong>1. Costo por número:</strong> Cada número tiene un costo de $10.</p>
+                <p><strong>2. Cómo funciona:</strong> Al comprar un número, se marca como vendido y no puede ser comprado de nuevo.</p>
+                <p><strong>3. Premios:</strong> El premio se asignará a un número al azar entre los números vendidos.</p>
+                <p><strong>4. Fecha del sorteo:</strong> El sorteo se llevará a cabo el 30 de marzo a las 8:00 PM.</p>
+                <p><strong>5. Contacto:</strong> Si tienes preguntas, puedes contactarnos por correo electrónico.</p>
+            </div>
+        </div>
+
+        <!-- Contador de números vendidos -->
+        <div id="contador-vendidos"></div>
+
+        <!-- Tabla de la rifa -->
+        <div class="container">
+            <table>
+                <tbody id="tabla-rifa"></tbody>
+            </table>
+        </div>
+
+        <!-- Botones para compartir en redes sociales -->
+        <div class="social-buttons">
+            <a href="#" target="_blank" class="btn-social facebook">Compartir en Facebook</a>
+            <a href="#" target="_blank" class="btn-social twitter">Compartir en Twitter</a>
+            <a href="#" target="_blank" class="btn-social whatsapp">Compartir en WhatsApp</a>
+        </div>
+
+        <!-- Información de alias para transferencia -->
+        <div class="transfer-info">
+            <h3>Alias para Transferencia:</h3>
+            <p>Nombre: Rifa Futurista</p>
+            <p>Alias: rifafuturista123</p>
+        </div>
+    </div> <!-- Fin del contenedor principal -->
+
+    <!-- Cargar el script con módulos -->
     <script type="module" src="script.js"></script>
 </body>
 </html>
+
+

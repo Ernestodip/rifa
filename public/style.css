@@ -6,149 +6,193 @@
 }
 
 body {
-    background-color: #2f2f2f; /* Fondo gris oscuro más suave */
-    color: #f5f5f5;
+    background: linear-gradient(135deg, #262626, #262626a6); /* Fondo gradiente */
+    color: #D9D1B8;
     font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin: 0;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-    color: rgb(255, 230, 0);
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(111, 0, 255, 0.7), 0 0 30px rgba(111, 0, 255, 0.7);
-    margin-bottom: 30px;
-    animation: slideIn 1.2s ease-out; /* Animación de entrada del título */
+    font-size: 32px;
+    color: #D9D1B8; 
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #736743;
+    margin-bottom: 10px;
 }
 
-/* Animación de entrada para el título */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Estilo del contenedor principal */
+.main-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
 }
 
-.container {
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.644); /* Fondo oscuro semitransparente */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 20px;
 }
 
-table {
+.modal-content {
+    background-color: #000000; /* Fondo más oscuro para el modal */
+    color:#BFB38F;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5); /* Sombra más suave */
+}
+
+.cerrar {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.cerrar:hover {
+    color: #fff;
+}
+
+/* Tabla de la rifa */
+.container table {
+    width: 100%;
+    margin: 0 auto;
     border-collapse: collapse;
-    background-color: #b32a00; /* Rojo más intenso */
-    box-shadow: 0 0 20px rgba(255, 208, 0, 0.3);
-    margin: 20px auto;
-    border-radius: 20px;
-    overflow: hidden;
-    transform: scale(1);
-    transition: all 0.3s ease;
-    animation: fadeIn 1.5s ease-in-out; /* Animación de aparición de la tabla */
+    background-color:#7F7F7F; /* Rojo más suave */
+    box-shadow: 0 0 20px #0D0D0D;
+    border-radius: 15px;
+    flex: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 th, td {
-    border: 2px solid #ae00ff;
-    padding: 20px;
-    font-size: 18px;
+    padding: 14px;
     text-align: center;
     cursor: pointer;
-    width: 60px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-th {
-    background-color: #222; /* Fondo más oscuro para encabezado */
-    color: #00ffff;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-td {
-    background-color: #2b2b2b;
-    color: #00ffff;
-    font-size: 16px;
-    padding: 15px;
-}
-
-td:hover {
-    transform: scale(1.1);
-    background-color: rgba(0, 255, 255, 0.4); /* Cambio de color más sutil */
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra al hacer hover */
+    color: #000000;
+    border: 2px solid #262626;
+    transition: background-color 0.3s ease;
 }
 
 td.vendido {
-    background-color: #ff3333 !important;
-    color: white !important;
+    background-color:#a70d0d; /* Rojo más suave para los vendidos */
+    color: white;
     text-decoration: line-through;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
 }
 
-td.vendido:hover {
-    background-color: #e60000;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+td:hover {
+    background-color:#D9D1B8;
 }
 
-/* Animación de aparición de la tabla */
+/* Estilo de los botones para redes sociales */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-social {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordes más redondeados */
+    text-decoration: none;
+    font-size: 16px;
+    width: 220px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #1da1f2; }
+.whatsapp { background-color: #25d366; }
+
+.btn-social:hover {
+    background-color: #00bfff;
+}
+
+/* Estilo para la sección de alias */
+.transfer-info {
+    background-color: #444;
+    color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.transfer-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.transfer-info p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFEB3B; /* Amarillo cálido */
+}
+
+/* Animaciones */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* Mobile-first */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    th, td {
-        padding: 12px;
-        font-size: 14px;
-        width: 45px;
-    }
-}
-
-/* Estilo para pantallas más grandes */
-@media (min-width: 601px) {
-    table {
+/* Media Query para pantallas más grandes */
+@media (min-width: 768px) {
+    .main-container {
         width: 80%;
     }
 
-    th, td {
-        width: 60px;
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1024px) {
     h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 
-    th, td {
-        padding: 20px;
-        font-size: 22px;
-        width: 70px;
+    .btn-social {
+        width: 250px;
     }
 
-    table {
-        width: 70%;
+    .transfer-info {
+        width: 80%;
+    }
+
+    /* Asegurarse de que la tabla no se expanda demasiado */
+    .container table {
+        width: 100%;
     }
 }
-
-
