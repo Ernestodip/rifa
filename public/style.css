@@ -1,79 +1,90 @@
-/* Reset de márgenes y paddings */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    background: linear-gradient(135deg, #262626, #262626a6); /* Fondo gradiente */
-    color: #D9D1B8;
+    background: linear-gradient(135deg, #042940, #333333);
+    color: #D9D1B8;  /* Color amarillo */
     font-family: 'Orbitron', sans-serif;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
     text-align: center;
-    padding: 10px;
-    margin: 0;
-    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+
+.main-container {
+    max-width: 390px; 
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 header {
-    width: 100%;
-    margin-bottom: 20px;
     padding: 10px;
 }
 
 h1 {
-    font-size: 32px;
-    color: #D9D1B8; 
+    font-size: 28px;
+    color: #D6D58E; 
     letter-spacing: 2px;
-    text-shadow: 0 0 15px #736743;
+    text-shadow: 0 0 15px #D6D58E;
     margin-bottom: 10px;
 }
 
-/* Estilo del contenedor principal */
-.main-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    flex: 1;
+
+.btn-reglas {
+    background-color: #D6D58E;
+    color: #042940;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Modal */
+.btn-reglas:hover {
+    background-color:#019b8b;
+    transform: scale(1.05);
+}
+
+/* MODAL */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(22, 22, 22, 0.644); /* Fondo oscuro semitransparente */
-    display: flex;
+    background-color:#191a1777;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #000000; /* Fondo más oscuro para el modal */
-    color:#BFB38F;
+    background-color: #042940;
+    color: #D6D58E;
     padding: 25px;
     width: 90%;
     max-width: 400px;
     border-radius: 12px;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5); /* Sombra más suave */
+    box-shadow: 0 5px 20px #383834a4;
+    position: relative;
 }
 
 .cerrar {
-    color: #aaa;
+    color: #b40000;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
@@ -83,41 +94,70 @@ h1 {
 }
 
 .cerrar:hover {
-    color: #fff;
+    color: #DBF227;
 }
 
-/* Tabla de la rifa */
+/* CONTADOR */
+#contador-vendidos {
+    font-size: 16px;
+    font-weight: bold;
+    color: #D6D58E;
+}
+
+/* TABLA DE LA RIFA */
+.container {
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .container table {
     width: 100%;
-    margin: 0 auto;
     border-collapse: collapse;
-    background-color:#7F7F7F; /* Rojo más suave */
-    box-shadow: 0 0 20px #0D0D0D;
+    background-color: #005C53;
+    box-shadow: 0 0 20px #D6D58E;
     border-radius: 15px;
-    flex: 1;
-    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.container table thead tr:first-child th {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.container table tbody tr:last-child td {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 th, td {
-    padding: 14px;
+    padding: 12px;
     text-align: center;
-    cursor: pointer;
-    color: #000000;
     border: 2px solid #262626;
+    font-size: 16px;
+    color: #D6D58E;
     transition: background-color 0.3s ease;
 }
 
+th {
+    background-color: #D6D58E;
+    color: #D6D58E;
+}
+
+/* Efecto de hover sobre celdas */
+td:hover {
+    background-color: #019b8b;
+    cursor: pointer;
+}
+
+/* Estilo para números vendidos */
 td.vendido {
-    background-color:#a70d0d; /* Rojo más suave para los vendidos */
+    background-color: #a70d0d;
     color: white;
     text-decoration: line-through;
 }
 
-td:hover {
-    background-color:#D9D1B8;
-}
-
-/* Estilo de los botones para redes sociales */
+/* BOTONES DE REDES SOCIALES */
 .social-buttons {
     display: flex;
     flex-direction: column;
@@ -130,25 +170,48 @@ td:hover {
     background-color: #333;
     color: white;
     padding: 12px 25px;
-    border-radius: 50px; /* Bordes más redondeados */
+    border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     width: 220px;
-    text-align: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.facebook { background-color: #3b5998; }
-.twitter { background-color: #1da1f2; }
-.whatsapp { background-color: #25d366; }
+.btn-social i {
+    font-size: 20px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.instagram {
+    background-color: #E1306C;
+}
 
 .btn-social:hover {
     background-color: #00bfff;
 }
 
-/* Estilo para la sección de alias */
+.btn-social i {
+    font-size: 24px; /* Tamaño más grande de los iconos */
+}
+
+/* INFORMACIÓN DE TRANSFERENCIA */
 .transfer-info {
-    background-color: #444;
+    background-color: #042940;
     color: #fff;
     padding: 15px;
     border-radius: 12px;
@@ -164,35 +227,53 @@ td:hover {
 .transfer-info p {
     font-size: 16px;
     font-weight: bold;
-    color: #FFEB3B; /* Amarillo cálido */
+    color: #D6D58E;
 }
 
-/* Animaciones */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Media Query para pantallas más grandes */
+/* MEDIA QUERIES: PANTALLAS MÁS GRANDES */
 @media (min-width: 768px) {
     .main-container {
-        width: 80%;
+        max-width: 800px;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 65px;
+    }
+
+    .btn-reglas {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+
+    .social-buttons {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     .btn-social {
         width: 250px;
     }
 
-    .transfer-info {
-        width: 80%;
-    }
 
-    /* Asegurarse de que la tabla no se expanda demasiado */
-    .container table {
-        width: 100%;
+    th, td {
+        font-size: 18px;
+        padding: 15px;
     }
 }
+
+@media (min-width: 1024px) {
+    .main-container {
+        max-width: 1000px;
+    }
+
+    th, td {
+        font-size: 20px;
+        padding: 18px;
+    }
+}
+
+
+
+

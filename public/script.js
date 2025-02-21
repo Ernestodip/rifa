@@ -86,6 +86,11 @@ document.querySelectorAll('.twitter').forEach(button => {
 document.querySelectorAll('.whatsapp').forEach(button => {
     button.href = `https://wa.me/?text=¡Participa en nuestra rifa futurista! ${window.location.href}`;
 });
+document.querySelectorAll('.instagram').forEach(button => {
+    button.href = `https://www.instagram.com/`;
+});
+
+
 // Función para abrir el modal
 const btnReglas = document.getElementById("btn-reglas");
 const modalReglas = document.getElementById("modal-reglas");

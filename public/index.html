@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifa Futurista</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifa Futurista</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="main-container"> <!-- Nuevo contenedor principal -->
-        <header>
-            <h1>Super Rifa</h1>
-            <button id="btn-reglas" class="btn-reglas">Reglas de la Rifa</button>
-        </header>
+  <div class="main-container">
+    <header>
+      <h1>Super Rifa</h1>
+      <button id="btn-reglas" class="btn-reglas">Reglas de la Rifa</button>
+    </header>
 
-        <!-- Modal de Reglas -->
-        <div id="modal-reglas" class="modal">
-            <div class="modal-content">
-                <span id="cerrar-modal" class="cerrar">&times;</span>
-                <h2>Reglas de la Rifa</h2>
-                <p><strong>1. Costo por número:</strong> Cada número tiene un costo de $10.</p>
-                <p><strong>2. Cómo funciona:</strong> Al comprar un número, se marca como vendido y no puede ser comprado de nuevo.</p>
-                <p><strong>3. Premios:</strong> El premio se asignará a un número al azar entre los números vendidos.</p>
-                <p><strong>4. Fecha del sorteo:</strong> El sorteo se llevará a cabo el 30 de marzo a las 8:00 PM.</p>
-                <p><strong>5. Contacto:</strong> Si tienes preguntas, puedes contactarnos por correo electrónico.</p>
-            </div>
-        </div>
+    <!-- Modal de Reglas -->
+    <div id="modal-reglas" class="modal">
+      <div class="modal-content">
+        <span id="cerrar-modal" class="cerrar">&times;</span>
+        <h2>Reglas de la Rifa</h2>
+        <p><strong>1. Costo por número:</strong> Cada número tiene un costo de $4000.</p>
+        <p><strong>2. Cómo funciona:</strong> Al comprar un número, se marca como vendido y no puede ser comprado de nuevo.</p>
+        <p><strong>3. Premios:</strong> 5 increíbles premios. Todos los productos son nuevos, algunos testeados para garantizar su correcto funcionamiento.</p>
+        <p><strong>4. Fecha del sorteo:</strong> El sorteo se llevará a cabo una vez vendido todos los numeros.</p>
+        <p><strong>5. Método de sorteo:</strong> Será a través de una página confiable y lo transmitiré en vivo para total transparencia.</p>
+        <p><strong>6. Pago:</strong> Una vez abonado el numero se corrobora y el numero se guardara en una base de datos, si llegases a ganar yo me pondre en contacto contigo para coordinar la entrega del premio.</p>
+      </div>
+    </div>
 
-        <!-- Contador de números vendidos -->
-        <div id="contador-vendidos"></div>
+    <!-- Contador de números vendidos -->
+    <div id="contador-vendidos"></div>
 
-        <!-- Tabla de la rifa -->
-        <div class="container">
-            <table>
-                <tbody id="tabla-rifa"></tbody>
-            </table>
-        </div>
+    <!-- Tabla de la rifa -->
+    <div class="container">
+      <table>
+        <tbody id="tabla-rifa"></tbody>
+      </table>
+    </div>
 
-        <!-- Botones para compartir en redes sociales -->
-        <div class="social-buttons">
-            <a href="#" target="_blank" class="btn-social facebook">Compartir en Facebook</a>
-            <a href="#" target="_blank" class="btn-social twitter">Compartir en Twitter</a>
-            <a href="#" target="_blank" class="btn-social whatsapp">Compartir en WhatsApp</a>
-        </div>
-
-        <!-- Información de alias para transferencia -->
-        <div class="transfer-info">
-            <h3>Alias para Transferencia:</h3>
-            <p>Nombre: Rifa Futurista</p>
-            <p>Alias: rifafuturista123</p>
-        </div>
-    </div> <!-- Fin del contenedor principal -->
-
-    <!-- Cargar el script con módulos -->
-    <script type="module" src="script.js"></script>
+    <!-- Botones para compartir en redes sociales -->
+    <div class="social-buttons">
+        <a href="#" target="_blank" class="btn-social facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank" class="btn-social twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="btn-social whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank" class="btn-social instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    <!-- Información de alias para transferencia -->
+    <div class="transfer-info">
+      <h2>Alias: ernestodipaolamp</h2>
+      <p>Nombre: Ernesto Di Paola</p>
+      <p>Banco: Mercado Pago</p>
+    </div>
+  </div>
+  
+  <!-- Cargar el script con módulos -->
+  <script type="module" src="script.js"></script>
 </body>
 </html>
 
