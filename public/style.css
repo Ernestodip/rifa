@@ -7,7 +7,7 @@
 
 
 body {
-    background: linear-gradient(135deg, #042940, #333333);
+    background: linear-gradient(135deg, #120F26, #302A59);
     color: #D9D1B8;  /* Color amarillo */
     font-family: 'Orbitron', sans-serif;
     text-align: center;
@@ -21,7 +21,6 @@ body {
 
 .main-container {
     max-width: 390px; 
-
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -35,16 +34,16 @@ header {
 
 h1 {
     font-size: 28px;
-    color: #D6D58E; 
+    color:#57F2AA; 
     letter-spacing: 2px;
-    text-shadow: 0 0 15px #D6D58E;
+    text-shadow: 0 0 15px #57F2AA;
     margin-bottom: 10px;
 }
 
 
 .btn-reglas {
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: #302A59;
+    color: #84468C;
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
@@ -53,7 +52,7 @@ h1 {
 }
 
 .btn-reglas:hover {
-    background-color:#019b8b;
+    background-color:#57F2AA;
     transform: scale(1.05);
 }
 
@@ -66,14 +65,14 @@ h1 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color:#191a1777;
+    background-color:#0f110aab;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #042940;
-    color: #D6D58E;
+    background-color: #120F26;
+    color: #57F2AA;
     padding: 25px;
     width: 90%;
     max-width: 400px;
@@ -101,7 +100,7 @@ h1 {
 #contador-vendidos {
     font-size: 16px;
     font-weight: bold;
-    color: #D6D58E;
+    color: #57F2AA;
 }
 
 /* TABLA DE LA RIFA */
@@ -114,8 +113,8 @@ h1 {
 .container table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #005C53;
-    box-shadow: 0 0 20px #D6D58E;
+    background-color: #120F26;
+    box-shadow: 0 0 20px #57F2AA;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -135,25 +134,25 @@ th, td {
     text-align: center;
     border: 2px solid #262626;
     font-size: 16px;
-    color: #D6D58E;
+    color: #84468C;
     transition: background-color 0.3s ease;
 }
 
 th {
-    background-color: #D6D58E;
-    color: #D6D58E;
+    background-color: #302A59;
+    color: #302A59;
 }
 
 /* Efecto de hover sobre celdas */
 td:hover {
-    background-color: #019b8b;
+    background-color:#57F2AA;
     cursor: pointer;
 }
 
 /* Estilo para números vendidos */
 td.vendido {
     background-color: #a70d0d;
-    color: white;
+    color: #57F2AA;
     text-decoration: line-through;
 }
 
@@ -168,7 +167,7 @@ td.vendido {
 
 .btn-social {
     background-color: #333;
-    color: white;
+    color: #57F2AA;
     padding: 12px 25px;
     border-radius: 50px;
     text-decoration: none;
@@ -186,37 +185,37 @@ td.vendido {
 }
 
 .facebook {
-    background-color: #3b5998;
+    background-color: #302A59;
 }
 
 .twitter {
-    background-color: #1da1f2;
+    background-color: #302A59;
 }
 
 .whatsapp {
-    background-color: #25d366;
+    background-color: #302A59;
 }
 
 .instagram {
-    background-color: #E1306C;
+    background-color: #302A59;
 }
 
 .btn-social:hover {
-    background-color: #00bfff;
+    background-color:#302A59;
 }
 
 .btn-social i {
-    font-size: 24px; /* Tamaño más grande de los iconos */
+    font-size: 30px; /* Tamaño más grande de los iconos */
 }
 
 /* INFORMACIÓN DE TRANSFERENCIA */
 .transfer-info {
-    background-color: #042940;
-    color: #fff;
+    background-color: #120F26;
+    color: #57F2AA;
     padding: 15px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px #57F2AA;
 }
 
 .transfer-info h3 {
@@ -227,7 +226,7 @@ td.vendido {
 .transfer-info p {
     font-size: 16px;
     font-weight: bold;
-    color: #D6D58E;
+    color: #ef80fd;
 }
 
 /* MEDIA QUERIES: PANTALLAS MÁS GRANDES */
@@ -273,7 +272,3 @@ td.vendido {
         padding: 18px;
     }
 }
-
-
-
-
