@@ -19,6 +19,28 @@ body {
 }
 
 
+.navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    color: #000;
+}
+
+.navbar ul li a {
+    color: #302A59;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #57F2AA;
+}
+
 .main-container {
     max-width: 390px; 
     margin: 0 auto;
@@ -233,6 +255,37 @@ td.vendido {
 @media (min-width: 768px) {
     .main-container {
         max-width: 800px;
+    }
+
+    .navbar {
+        background-color: #302A59;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #57F2AA;
+        text-decoration: none;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: center;
+        gap: 20px;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a {
+        color: #D9D1B8;
+        text-decoration: none;
+    }
+    
+    .navbar ul li a:hover {
+        color: #57F2AA;
     }
 
     h1 {
